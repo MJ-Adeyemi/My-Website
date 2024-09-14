@@ -12,35 +12,47 @@
 <body class="min-[320px]:bg-zinc-900 md:bg-black box-border flex justify-center">
     <div class="bg-zinc-900 md:w-[710px] lg:w-[1230px] border-[1px] border-neutral-800 md:px-4 lg:px-[60px]">
         <nav>
-            <div class="dblock mt-5 flex justify-end me-4 gap-3">
-                <!-- for mobile -->
-                <div>
-                    <div class="focus-work text-white text-center w-22 h-11 py-2 px-5 bg-zinc-800 border-[1px] border-neutral-700 rounded-full">
-                        <a href="#menu">Menu</a>
-                        <span class="text-gray-500"><i class="fa-solid fa-angle-down"></i></span>
-        
-                        <div class="menu-to-hide w-25 h-auto p-7 m-5 border-[1px] border-neutral-700 rounded-3xl z-50">
-                            <div class="flex gap-44 text-gray-400">
-                                <legend class="text-base">Navigation</legend>
-                                <span class="text-lg"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-        
-                            <br>
-        
-                            <ul class="text-white leading-10 divide-y divide-neutral-800">
-                                <li><a href="#About">About</a></li>
-                                <li><a href="#Articles">Articles</a></li>
-                                <li><a href="#Projects">Projects</a></li>
-                                <li><a href="#Speaking">Speaking</a></li>
-                                <li><a href="#Uses">Uses</a></li>
-                            </ul>
-                        </div>
+            <!--menu for mobile - to show -->
+            <div class="mt-5 flex justify-end gap-3 me-5">
+                    <div class="md:hidden flex gap-3 text-white justify-center items-center w-[90px] h-10 bg-zinc-800 border-[1px] border-neutral-700 rounded-full">
+                        <span class="text-[14px] font-semibold">Menu</span>
+                        <span class="text-gray-500 text-[10px]"><i class="fa-solid fa-angle-down"></i></span>
                     </div>
-                </div>
         
-                <div class="text-white text-center w-[45px] h-11 py-2 bg-zinc-800 border-[1px] border-neutral-700 rounded-full">
-                    <i class="fa-solid fa-circle-half-stroke"></i>
+                <a href="#darkmode">
+                    <div class="text-gray-400 hover:text-white text-center w-[45px] h-11 py-2 bg-zinc-800 border-[1px] border-neutral-700 rounded-full">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- menu for mobile - to hide -->
+            <!-- <div class="md:hidden absolute w-[90%] h-auto p-7 m-5 border-[1px] border-neutral-700 rounded-3xl bg-zinc-800">
+                <div class="flex text-gray-400">
+                    <legend class="text-base flex flex-auto flex-wrap">Navigation</legend>
+                    <span class="text-lg"><i class="fa-solid fa-xmark"></i></span>
                 </div>
+                
+                <br>
+                
+                <ul class="text-white leading-10 divide-y divide-zinc-700 space-y-1">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Articles">Articles</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Speaking">Speaking</a></li>
+                    <li><a href="#Uses">Uses</a></li>
+                </ul>
+            </div> -->
+
+            <!-- menu for md -->
+            <div class="hidden -mt-10 md:block">
+                <ul class="flex justify-center text-white text-sm font-semibold">
+                    <li class="bg-neutral-800 py-[10px] px-[15px] border-[1px] border-neutral-700 border-r-0 rounded-l-full hover:text-green-300"><a href="#about">About</a></li>
+                    <li class="bg-neutral-800 py-[10px] px-[15px] border-[1px] border-neutral-700 border-r-0 border-l-0 hover:text-green-300"><a href="#articles">Articles</a></li>
+                    <li class="bg-neutral-800 py-[10px] px-[15px] border-[1px] border-neutral-700 border-r-0 border-l-0 hover:text-green-300"><a href="#projects">Projects</a></li>
+                    <li class="bg-neutral-800 py-[10px] px-[15px] border-[1px] border-neutral-700 border-r-0 border-l-0 hover:text-green-300"><a href="#speaking">Speaking</a></li>
+                    <li class="bg-neutral-800 py-[10px] px-[15px] border-[1px] border-neutral-700 border-l-0 rounded-r-full hover:text-green-300"><a href="#uses">Uses</a></li>
+                </ul>
             </div>
         </nav>
         
@@ -61,10 +73,10 @@
             </div>
         
             <div class="flex gap-8 text-neutral-400 m-5 text-[20px]">
-                <i class="fa-brands fa-x-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-linkedin"></i>
+                <a href="#twitter"><span class="hover:text-white"><i class="fa-brands fa-x-twitter"></i></span></a>
+                <a href="#instagram"><span class="hover:text-white"><i class="fa-brands fa-instagram"></i></span></a>
+                <a href="#github"><span class="hover:text-white"><i class="fa-brands fa-github"></i></span></a>
+                <a href="#linkedin"><span class="hover:text-white"><i class="fa-brands fa-linkedin"></i></span></a>
             </div>
 
             <br><br>
@@ -81,53 +93,67 @@
 
             <div class="lg:flex">
                 <div class="lg:w-[60%]">
-                    <article>
-                        <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
-                            <p>September 5, 2022</p>
-                        </div>
-                        <p class="text-white text-[15px] font-semibold m-5">Crafting a design System for a multiplanetry future</p>
-                        <p class="text-neutral-400 text-[14px] m-5">Most companies try to stay ahead of the curve when it comes to
-                            visual
-                            design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when
-                            humanity has spread across our entire solar system.
-                        <div class="text-green-300 text-[14px] m-5"><a href="#article" class="flex gap-2">
-                                <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
-                            </a></div>
-                    </article>
+                    
+                    <a href="#article1">
+                        <article class="p-2 rounded-2xl hover:bg-zinc-800">
+                            <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
+                                <p>September 5, 2022</p>
+                            </div>
+
+                            <p class="text-white text-[15px] font-semibold m-5">Crafting a design System for a multiplanetry future</p>
+                        
+                            <p class="text-neutral-400 text-[14px] m-5">Most companies try to stay ahead of the curve when it comes to visual
+                                design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when
+                                humanity
+                                has spread across our entire solar system.
+                        
+                            <div class="text-green-300 text-[14px] m-5">
+                                <a href="#article" class="flex gap-2">
+                                    <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
+                                </a>
+                            </div>
+                        </article>
+                    </a>
                 
                     <br>
                 
-                    <article>
-                        <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
-                            <p>September 2, 2022</p>
-                        </div>
-                        <p class="text-white text-[15px] font-semibold m-5">Introducing Animaginary: High performance web animations</p>
-                        <p class="text-neutral-400 text-[14px] m-5">When you’re building a website for a company as ambitious as
-                            Planetaria,
-                            you need to make an impression. I wanted people to visit our website and see animations that looked more
-                            realistic than reality itself.
-                        <div class="text-green-300 text-[14px] m-5"><a href="#article" class="flex gap-2">
-                                <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
-                            </a></div>
-                    </article>
+                    <a href="#article2">
+                        <article class="p-2 rounded-2xl hover:bg-zinc-800">
+                            <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
+                                <p>September 2, 2022</p>
+                            </div>
+
+                            <p class="text-white text-[15px] font-semibold m-5">Introducing Animaginary: High performance web animations</p>
+                            
+                            <p class="text-neutral-400 text-[14px] m-5">When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
+                            
+                            <div class="text-green-300 text-[14px] m-5">
+                                <a href="#article" class="flex gap-2">
+                                    <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
+                                </a>
+                            </div>
+                        </article>
+                    </a>
                 
                     <br>
                 
-                    <article>
-                        <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
-                            <p>July 14, 2022</p>
-                        </div>
-                        <p class="text-white text-[15px] font-semibold m-5">Rewriting the cosmOS kernel in Rust</p>
-                        <p class="text-neutral-400 text-[14px] m-5">When we released the first version of cosmOS last year, it was
-                            written
-                            in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front
-                            page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting
-                            things
-                            in Rust every single week.
-                        <div class="text-green-300 text-[14px] m-5"><a href="#article" class="flex gap-2">
-                                <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
-                            </a></div>
-                    </article>
+                    <a href="#article3">
+                        <article class="p-2 rounded-2xl hover:bg-zinc-800">
+                            <div class="flex gap-3 text-neutral-400 text-[14px] m-5"><span>|</span>
+                                <p>July 14, 2022</p>
+                            </div>
+
+                            <p class="text-white text-[15px] font-semibold m-5">Rewriting the cosmOS kernel in Rust</p>
+                            
+                            <p class="text-neutral-400 text-[14px] m-5">When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.
+                            
+                            <div class="text-green-300 text-[14px] m-5">
+                                <a href="#article" class="flex gap-2">
+                                    <p>Read Article</p><span class="text-[15px]"><i class="fa-solid fa-angle-right"></i></span>
+                                </a>
+                            </div>
+                        </article>
+                    </a>
                 </div>
                 
                 <br>
@@ -141,67 +167,109 @@
                             <p class="text-neutral-400 text-[14px] m-5">Get notified when I publish something new, and unsubscribe at anytime.</p>
                             
                             <form action="#" class="m-5 flex gap-3">
-                                <div><input type="email" placeholder="Email address"
-                                        class="w-55 md:w-[500px] lg:w-[290px] p-2 rounded-[5px] bg-neutral-800 border-[1px] border-neutral-700 outline-green-300">
-                                </div>
-                                <div><button
-                                        class="text-white font-semibold bg-neutral-500 text-[14px] p-2 px-4 py-[10px] rounded-[5px]">Join</button>
-                                </div>
+                                <input type="email" placeholder="Email address" class="min-w-0 flex-auto p-2 rounded-[5px] bg-neutral-800 border-[1px] border-neutral-700 outline-green-300 text-white">
+                                <button class="text-white font-semibold bg-neutral-700 hover:bg-neutral-600 text-[14px] p-2 px-4 py-[10px] rounded-[5px]">Join</button>
                             </form>
                         </div>
                     </article>
                 
                     <br>
                 
-                    <article class="h-auto border-[1px] border-neutral-700 m-5 rounded-[15px]">
-                        <div class="m-5 flex gap-3"><span class="text-neutral-400 text-[20px] -mt-1"><i class="fa-solid fa-briefcase"></i></span> <p class="text-white text-[14px] font-semibold">Work</p></div>
-                        <div class="flex">
-                            <div class="m-5 mt-0 w-10 h-auto p-[6px] bg-neutral-800 rounded-full">
-                                <img src="../PICTURES/planetaria.svg" width="50px" height="auto" alt="Planetaria Logo">
-                            </div>
-                
-                            <div class="-mt-1">
-                                <span class="text-white font-semibold text-[14px]">Planetaria</span> <br>
-                                <div class="flex gap-[100px] md:gap-[400px] lg:gap-[180px]"><span class="text-neutral-400 text-[14px]">CEO</span> <span class="text-neutral-400 text-[14px]">2019 -- Present</span></div>
-                            </div>
+                    <div class="h-auto border-[1px] border-neutral-700 m-5 rounded-[15px]">
+                        <div class="m-5 flex gap-3">
+                            <span class="text-neutral-400 text-[20px] -mt-1"><i class="fa-solid fa-briefcase"></i></span> <p class="text-white text-[14px] font-semibold">Work</p>
                         </div>
-                
-                        <div class="flex">
-                            <div class="m-5 mt-0 w-10 h-auto p-[7px] bg-neutral-800 rounded-full">
-                                <img src="../PICTURES/airbnb.svg" width="50px" height="auto" alt="Airbnb Logo">
-                            </div>
-                
-                            <div class="-mt-1">
-                                <span class="text-white font-semibold text-[14px]">Airbnb</span> <br>
-                                <div class="flex gap-[50px] md:gap-[330px] lg:gap-[110px]"><span class="text-neutral-400 text-[14px]">Product Designer</span> <span class="text-neutral-400 text-[14px]">2014 -- 2019</span></div>
-                            </div>
+
+                        <ul class="space-y-3">
+                            <li class="flex gap-4 mx-5">
+                                <div class="flex justify-center mt-1 w-10 h-10 p-[5px] bg-neutral-800 rounded-full">
+                                    <img src="./PICTURES/planetaria.svg" alt="planeteria image" width="35px" height="auto">
+                                </div>
+                            
+                                <dl class="flex flex-auto flex-wrap">
+                                    <dt class="sr-only">Company</dt>
+                                    <dd class="w-full flex-none text-white font-semibold text-[14px]">Planetaria</dd>
+                            
+                                    <dt class="sr-only">Role</dt>
+                                    <dd class="text-neutral-400 text-[14px]">CEO</dd>
+                            
+                                    <dt class="sr-only">Date</dt>
+                                    <dd class="ml-auto text-neutral-400 text-[14px]">
+                                        <time datetime="2019">2019</time>
+                                        <span aria-hidden="true">-</span>
+                                        <time datetime="2024">Present</time>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+                            <li class="flex gap-4 mx-5">
+                                <div class="flex justify-center mt-1 w-10 h-10 p-[5px] bg-neutral-800 rounded-full">
+                                    <img src="./PICTURES/airbnb.svg" alt="airbnb image" width="35px" height="auto">
+                                </div>
+                            
+                                <dl class="flex flex-auto flex-wrap">
+                                    <dt class="sr-only">Company</dt>
+                                    <dd class="w-full flex-none text-white font-semibold text-[14px]">Airbnb</dd>
+                            
+                                    <dt class="sr-only">Role</dt>
+                                    <dd class="text-neutral-400 text-[14px]">Product Designer</dd>
+                            
+                                    <dt class="sr-only">Date</dt>
+                                    <dd class="ml-auto text-neutral-400 text-[14px]">
+                                        <time datetime="2014">2014</time>
+                                        <span aria-hidden="true">-</span>
+                                        <time datetime="2019">2019</time>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+                            <li class="flex gap-4 mx-5">
+                                <div class="flex justify-center mt-1 w-10 h-10 p-[5px] bg-neutral-800 rounded-full">
+                                    <img src="./PICTURES/facebook.svg" alt="Facebook image" width="35px" height="auto">
+                                </div>
+                            
+                                <dl class="flex flex-auto flex-wrap">
+                                    <dt class="sr-only">Company</dt>
+                                    <dd class="w-full flex-none text-white font-semibold text-[14px]">Facebook</dd>
+                            
+                                    <dt class="sr-only">Role</dt>
+                                    <dd class="text-neutral-400 text-[14px]">iOS Software Engineer</dd>
+                            
+                                    <dt class="sr-only">Date</dt>
+                                    <dd class="ml-auto text-neutral-400 text-[14px]">
+                                        <time datetime="2011">2011</time>
+                                        <span aria-hidden="true">-</span>
+                                        <time datetime="2014">2014</time>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+                            <li class="flex gap-4 mx-5">
+                                <div class="flex justify-center mt-1 w-10 h-10 p-[5px] bg-neutral-800 rounded-full">
+                                    <img src="./PICTURES/starbucks.svg" alt="starbucks image" width="35px" height="auto">
+                                </div>
+                            
+                                <dl class="flex flex-auto flex-wrap">
+                                    <dt class="sr-only">Company</dt>
+                                    <dd class="w-full flex-none text-white font-semibold text-[14px]">Starbucks</dd>
+                            
+                                    <dt class="sr-only">Role</dt>
+                                    <dd class="text-neutral-400 text-[14px]">Shift Supervisor</dd>
+                            
+                                    <dt class="sr-only">Date</dt>
+                                    <dd class="ml-auto text-neutral-400 text-[14px]">
+                                        <time datetime="2008">2008</time>
+                                        <span aria-hidden="true">-</span>
+                                        <time datetime="2011">2011</time>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <div class="m-5">
+                            <button class="w-full text-white font-semibold bg-neutral-800 hover:bg-neutral-700 text-[14px] px-4 py-[10px] rounded-[5px] flex justify-center gap-3"><span>Download CV</span><span class="text-neutral-400"><i class="fa-solid fa-arrow-down"></i></span></button>
                         </div>
-                
-                        <div class="flex">
-                            <div class="m-5 mt-0 w-10 h-auto p-[7px] bg-neutral-800 rounded-full">
-                                <img src="../PICTURES/facebook.svg" width="50px" height="auto" alt="Facebook Logo">
-                            </div>
-                
-                            <div class="-mt-1">
-                                <span class="text-white font-semibold text-[14px]">Facebook</span> <br>
-                                <div class="flex gap-[20px] md:gap-[300px] lg:gap-[80px]"><span class="text-neutral-400 text-[14px]">iOS Software Engineer</span> <span class="text-neutral-400 text-[14px]">2011 -- 2014</span></div>
-                            </div>
-                        </div>
-                
-                        <div class="flex">
-                            <div class="m-5 mt-0 w-10 h-auto p-[7px] bg-neutral-800 rounded-full">
-                                <img src="../PICTURES/starbucks.svg" width="50px" height="auto" alt="Starbucks Logo">
-                            </div>
-                
-                            <div class="-mt-1">
-                                <span class="text-white font-semibold text-[14px]">Starbucks</span> <br>
-                                <div class="flex gap-[65px] md:gap-[342px] lg:gap-[120px]"><span class="text-neutral-400 text-[14px]">Shift Supervisor</span> <span class="text-neutral-400 text-[14px]">2008 -- 2011</span></div>
-                            </div>
-                        </div>
-                        <div class="m-5"><button
-                                class="w-full text-white font-semibold bg-neutral-800 text-[14px] px-4 py-[10px] rounded-[5px] flex justify-center gap-3"><span>Download
-                                    CV</span><span class="text-neutral-400"><i class="fa-solid fa-arrow-down"></i></span></button></div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </main>
@@ -211,10 +279,10 @@
         <footer>
             <div class="w-full h-auto bg-inherit border-[1px] border-neutral-700 border-x-0 border-b-0 md:flex flex-wrap pt-[40px] lg:flex justify-center gap-[80px] pt-[40px] pb-[80px]">
                 <ul class="text-white flex justify-center gap-5 font-semibold text-[14px]">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#speaking">Speaking</a></li>
-                    <li><a href="#uses">Uses</a></li>
+                    <li class="hover:text-green-300"><a href="#about">About</a></li>
+                    <li class="hover:text-green-300"><a href="#projects">Projects</a></li>
+                    <li class="hover:text-green-300"><a href="#speaking">Speaking</a></li>
+                    <li class="hover:text-green-300"><a href="#uses">Uses</a></li>
                 </ul>
 
                 <br>
@@ -223,7 +291,7 @@
 
                 <br>
 
-                <div class="text-white text-[14px] text-center">Made with <span class="text-red-500"><i class="fa-solid fa-heart"></i></span> by Majeed A. Adeyemi</div>
+                <div class="text-white text-[14px] text-center">Made with <span class="text-red-500"><i class="fa-solid fa-heart"></i></span> by <span class="text-green-300">Majeed A. Adeyemi</span></div>
             </div>
         </footer>
     </div>
